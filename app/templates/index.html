@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/static/header.css">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: mintcream;
+        }
+
+        .bodyText {
+            background-color: mintcream;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .headline {
+            background-color: mintcream;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            width: 100%;
+            height: 100%;
+            clear: both;
+        }
+
+        .two-column-container {
+            background-color: mintcream;
+            color: black;
+            padding: 20px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .left-column {
+            background-color: mintcream;
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .right-column {
+            background-color: mintcream;
+            width: 50%;
+            height: 100%;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <div class="headline">
+        Page Links
+    </div>
+
+    <div class="two-column-container">
+        <div class="left-column">
+            <div class="bodyText">
+                <a href="/about">About Page</a>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="bodyText">
+                <a href="/cipher">Cipher Page</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
