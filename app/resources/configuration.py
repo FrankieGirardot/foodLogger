@@ -1,10 +1,9 @@
-from configparser import ConfigParser
 import psycopg2
+from configparser import ConfigParser
+from app.resources import queries as queries
 
 
-SELECT = "SELECT * FROM testtable1"
-
-def load_config(filename='resources/database.ini', section='postgresql'):
+def load_config(filename='app/resources/database.ini', section='postgresql'):
     parser = ConfigParser()
     parser.read(filename)
 
@@ -37,9 +36,23 @@ def select(config):
         # connecting to the PostgreSQL server
         with psycopg2.connect(**config) as conn:
             with conn.cursor() as cur:
-                cur.execute(SELECT)
+                cur.execute(queries.selectAllFromFoodTable)
                 queryresults = cur.fetchall()
                 print(queryresults)
+            return conn
+    except (psycopg2.DatabaseError, Exception) as error:
+        print(error)
+
+
+def insert(config, insertquery: str) -> None:
+    """ Connect to the PostgreSQL database server """
+    try:
+        # connecting to the PostgreSQL server
+        # query = queries.insert_query("Bread", 1, 140)
+        print("insertquery: ", insertquery)
+        with psycopg2.connect(**config) as conn:
+            with conn.cursor() as cur:
+                cur.execute(insertquery)
             return conn
     except (psycopg2.DatabaseError, Exception) as error:
         print(error)
