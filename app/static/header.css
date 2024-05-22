@@ -1,0 +1,51 @@
+/* styles.css */
+
+header {
+    background-color: mintcream;
+    color: black;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.material-icons {
+    vertical-align: -14%
+}
+
+.middle {
+    width: 50%;
+    height: 100%;
+    background-color: mintcream;
+    color: black;
+    text-align: center;
+    border-collapse: collapse;
+    float: left;
+    font-size: 36px;
+}
+
+.left-corner {
+    width: 25%;
+    height: 100%;
+    background-color: mintcream;
+    color: black;
+    text-align: left;
+    border-collapse: collapse;
+    float: left;
+}
+
+.right-corner {
+    width: 25%;
+    height: 100%;
+    background-color: mintcream;
+    color: black;
+    text-align: right;
+    border-collapse: collapse;
+    position: relative;
+    float: right;
+}
+
